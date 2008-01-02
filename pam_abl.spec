@@ -12,6 +12,7 @@ URL: 		http://www.hexten.net/pam_abl/
 BuildRequires:	pam-devel
 Source0: 	http://www.padl.com/download/%{name}-%{version}.tar.bz2
 Patch0:		pam_abl-destdir.patch.bz2
+BuildRoot:      %{_tmppath}/%{name}-%{version}-buildroot
 
 %description
 A PAM module that provides auto blacklisting of hosts and users
