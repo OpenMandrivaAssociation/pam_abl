@@ -1,6 +1,6 @@
 %define name 	pam_abl
 %define version 0.2.3
-%define release %mkrel 3
+%define release %mkrel 4
 
 Summary:	Auto blacklisting of hosts and users
 Name: 		%{name}
@@ -10,7 +10,9 @@ License:	GPL
 Group:		System/Libraries
 URL: 		http://www.hexten.net/pam_abl/
 BuildRequires:	pam-devel
+BuildRequires:  db4-devel
 Source0: 	http://www.padl.com/download/%{name}-%{version}.tar.bz2
+Source1:    pam_abl.conf
 Patch0:		pam_abl-destdir.patch.bz2
 BuildRoot:      %{_tmppath}/%{name}-%{version}-buildroot
 
@@ -31,6 +33,10 @@ rm -rf $RPM_BUILD_ROOT
 install -d -m755 $RPM_BUILD_ROOT%{_bindir} $RPM_BUILD_ROOT/%{_lib}/security
 %makeinstall_std PAMDIR=$RPM_BUILD_ROOT/%{_lib}/security
 
+install -D -m644 %SOURCE1 %buildroot%_sysconfdir/security/pam_abl.conf
+
+install -d %buildroot%_var/lib/abl
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -39,4 +45,5 @@ rm -rf $RPM_BUILD_ROOT
 %doc AUTHORS NEWS README THANKS doc/index.html doc/pam_abl.html doc/style.css
 /%{_lib}/security/*so*
 %{_bindir}/%{name}
-
+%config(noreplace) %_sysconfdir/security/pam_abl.conf
+%dir %_var/lib/abl
