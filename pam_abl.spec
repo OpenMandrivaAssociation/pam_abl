@@ -1,6 +1,6 @@
 %define name 	pam_abl
 %define version 0.2.3
-%define release %mkrel 4
+%define release %mkrel 5
 
 Summary:	Auto blacklisting of hosts and users
 Name: 		%{name}
