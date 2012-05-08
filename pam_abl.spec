@@ -1,6 +1,6 @@
 %define name 	pam_abl
 %define version 0.2.3
-%define release %mkrel 7
+%define release 8
 
 Summary:	Auto blacklisting of hosts and users
 Name: 		%{name}
@@ -10,7 +10,7 @@ License:	GPL
 Group:		System/Libraries
 URL: 		http://www.hexten.net/pam_abl/
 BuildRequires:	pam-devel
-BuildRequires:  db4-devel
+BuildRequires:  db-devel
 Source0: 	http://www.padl.com/download/%{name}-%{version}.tar.bz2
 Source1:    pam_abl.conf
 Patch0:		pam_abl-destdir.patch.bz2
