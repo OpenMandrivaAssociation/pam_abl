@@ -1,3 +1,2 @@
 sources:
-  "pam_abl-0.2.3.tar.bz2": 62440e23187a95a5451f48fe8bf50c866734f3e4
-  "pam_abl-destdir.patch.bz2": f99dbb47db9b96d6384a7f3d0f4ea1823575aac0
+  pam-abl-0.6.0.tar.gz: 79667d2fdd41b5de0b2d4a4ae83870a65ef6b584
