@@ -3,7 +3,7 @@
 Summary:	Auto blacklisting of hosts and users
 Name:		pam_abl
 Version:	0.6.0
-Release:	1
+Release:	2
 License:	GPLv2+
 Group:		System/Libraries
 Url:		http://sourceforge.net/projects/pam-abl/
