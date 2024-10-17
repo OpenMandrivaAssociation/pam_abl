@@ -6,7 +6,7 @@ Version:	0.6.0
 Release:	2
 License:	GPLv2+
 Group:		System/Libraries
-Url:		http://sourceforge.net/projects/pam-abl/
+Url:		https://sourceforge.net/projects/pam-abl/
 Source0:	http://downloads.sourceforge.net/project/%{oname}/%{oname}/%{oname}-%{version}.tar.gz
 Patch0:		pam_abl-0.6.0-whitelistroot.patch
 BuildRequires:	cmake
